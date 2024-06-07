@@ -8,6 +8,7 @@ class ExtractPdf:
     self.carga_hrs = []
     self.total_faltas_materia = []
     self.dados_materias = {}
+    self.aluno = ""
       
 
   def extract(self):
@@ -18,6 +19,10 @@ class ExtractPdf:
       lines = text_content.split('\n')
 
       for i, line in enumerate(lines):
+        if "Aluno:"in line: 
+          parts = line.split(' - ')
+          self.aluno = parts[1]
+
         if "Unidade Curricular" in line:
           parts = line.split('- ch: ')
           unidade_curricular = parts[0].replace("Unidade Curricular: ", "").strip()

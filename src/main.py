@@ -23,6 +23,7 @@ def calc_faltas(horas, faltas):
 
 if len(pdf.dados_materias):
   ucs = list(pdf.dados_materias.keys())
+  st.subheader(pdf.aluno)
   materia = st.selectbox("Materia", ucs)
 
   col1, col2, col3 = st.columns(3)
