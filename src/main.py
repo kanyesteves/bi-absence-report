@@ -31,5 +31,5 @@ if len(pdf.dados_materias):
       result = calc_faltas(int(dados['Carga']), int(dados['Faltas']))
       col1.metric("Carga horaria da matéria", f"{dados['Carga']} horas", f"{int(dados['Carga']) / 4:.0f} dias de aula")
       col2.metric("Quantidade de dias que pode faltar na materia", f"{result:.0f} dias", "25%")
-      col3.metric("Total de faltas", f"{dados['Faltas']} faltas", f"{int(dados['Faltas']) / 4} dias")
+      col3.metric("Total de faltas", f"{dados['Faltas']} faltas", f"{int(dados['Faltas']) / 4:.0f} dias")
         
